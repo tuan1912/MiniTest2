@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+
+</body>
+<script>
+    //input: mảng có n phần tử
+    //           a
+    // output: đếm số phần tử cùng giá trị a trong mảng
+    let array = ["1", "2", "3", "4", "5", "a", "b", "c"];
+    let count = 0;
+    let inputElement = prompt('Nhập vào 1 phần tử:');
+    function findElement(){
+        for (let i = 0; i < array.length; i++) {
+            if (inputElement === array[i]) {
+                count++;
+            }
+        }
+        document.write('Số lần xuất hiện phần tử'+' '+inputElement+' '+'là'+' '+count+' '+'lần');
+    }
+    findElement();
+</script>
+</html>

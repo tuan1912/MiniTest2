@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+
+</body>
+<script>
+    //input: mảng có n phần tử
+    //output: số chữ số chẵn
+    let arr = [1, 2, 3, 4, 5];
+    for (let i = 0; i < arr.length; i++) {
+        if (findEven(arr[i])) {
+            document.write('Các số chẵn trong mảng:' + arr[i] + '<br>');
+        }
+    }
+
+    function findEven(x) {
+        if (x % 2 === 0) {
+            return true;
+        }
+    }
+
+</script>
+</html>
