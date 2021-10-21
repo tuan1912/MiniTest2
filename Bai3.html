@@ -10,8 +10,9 @@
 <script>
     // input: 1 mảng có n phần tử
     // output: tổng các số nguyên tố có trong bảng
-    let array=[1,2,3,4,5,6,7,8,9,10];
-    let totalPrime=0;
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let totalPrime = 0;
+
     function isPrime(number) {
         if (number <= 1) {
             return false;
@@ -24,11 +25,12 @@
             return true;
         }
     }
-    for (let i=0;i<array.length;i++) {
-        if (isPrime(array[i])){
-            totalPrime+=array[i];
+
+    for (let i = 0; i < array.length; i++) {
+        if (isPrime(array[i])) {
+            totalPrime += array[i];
         }
     }
-    document.write('Tổng số nguyên tố trong mảng:'+' '+totalPrime);
+    document.write('Tổng số nguyên tố trong mảng:' + ' ' + totalPrime);
 </script>
 </html>
