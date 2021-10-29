@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputArray = new Array(5)
+    for (let i = 0; i < inputArray.length; i++) {
+        inputArray[i] = +prompt("Nhập vào phần tử thứ" + " " + i);
+    }
+    console.log(inputArray)
+    function tryRemoveFromArray(array) {
+        let inputIndex = +prompt("Nhập vào index muốn loại bỏ phần tử ");
+        if ((inputIndex >= 0) && (inputIndex < inputArray.length)) {
+            let arr = new Array(array.length - 1);
+            for (let i = 0; i < inputIndex; i++) {
+                arr[i] = array[i];
+            }
+            for (let i = inputIndex + 1; i < array.length; i++) {
+                arr[i-1] = array[i];
+            }
+            return  arr;
+        } else {
+            alert("Nhập sai index!");
+            return  array;
+
+        }
+    }
+    console.log(tryRemoveFromArray(inputArray));
+
+</script>
+</body>
+</html>

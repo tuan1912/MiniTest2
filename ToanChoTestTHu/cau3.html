@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputString1 = prompt("Nhập vào chuỗi 1");
+    let inputString2 = prompt("Nhập vào chuỗi 2");
+    function checkString(string1,string2) {
+        let count= 0;
+        for (let i = 0; i < string2.length; i ++) {
+            for (let j = 0; j < string1.length; j ++)
+            if (string1[j]===string2[i]) {
+                count ++;
+            }
+        }
+        if ( count ===string1.length) {
+            return true;
+        } else  {
+            return false;
+        }
+    }
+    console.log(checkString(inputString1,inputString2));
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let grade = new Array(10);
+    for (let i = 0; i <10; i++) {
+        grade[i] = Math.floor(Math.random()*100);
+    }
+    console.log(grade);
+    function findThirdGrade(grade) {
+        let temp = grade[0]
+        for (let i = 0; i < grade.length; i++) {
+            for (let i = 0; i < grade.length; i ++) {
+                if (grade[i]>grade[i +1]) {
+                    grade[i] = grade[i+1]
+                    grade[i+1] = temp;
+                }
+            }
+        }
+        return grade[grade.length-3];
+    }
+    console.log( findThirdGrade(grade))
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="my_canvas"></canvas>
+<script>
+    let c = document.getElementById("my_canvas");
+    let ctx= c.getContext("2d");
+    class Reactangle {
+        x;
+        y;
+        width;
+        height;
+        color;
+        constructor(x,y,width,height,color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        render(canvas) {
+            ctx.beginPath();
+            ctx.color=  canvas.color
+           ctx.fillRect(canvas.x,canvas.y,canvas.width,canvas.height)
+        }
+
+    }
+    let myCanvas= new Reactangle(0,0,)
+    myCanvas.render(myCanvas)
+    window.onload = myCanvas.render;
+</script>
+</body>
+</html>
